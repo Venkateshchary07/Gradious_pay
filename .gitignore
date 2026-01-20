@@ -1,0 +1,37 @@
+
+node_modules/
+
+#build output
+
+Frontend/dist/
+dist
+dist-ssr
+
+#enivronment Variables
+
+.env
+Backend/.env
+
+
+# Logs
+
+
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+
+# OS / Editor files
+
+
+.DS_Store
+.vscode/*
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

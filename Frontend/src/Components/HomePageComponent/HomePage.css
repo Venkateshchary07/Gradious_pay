@@ -1,0 +1,322 @@
+.DashBoard-header {
+    position:fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    margin: 0px !important;
+    top:0px;
+    padding: 0 40px;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+    z-index: 200;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.DashBoard-header img {
+    height: 45px;
+}
+
+.Gradious-text {
+    margin: 0px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #0d0d0d;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: 25px;
+}
+
+.nav-item {
+    font-size: 15px;
+    font-weight: 500;
+    color: #3d3d3d;
+    cursor: pointer;
+    padding: 8px 5px;
+}
+
+.nav-item:hover {
+    color:coral;
+}
+#Recharge-Bills,#Ticket-Booking,#Payments-services{
+    border: none;
+    font-size: 15px;  
+}
+
+ 
+.right-section {
+    display: flex;
+    align-items: center;
+    gap:80px;
+    margin: 100px;
+}
+
+
+.user-profile-outer {
+    height: 35px;
+    width: auto;
+    border: 1px solid #333;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 8px;
+    /* justify-content: center;  */
+}
+
+.user-Profile {
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    margin: 2px;
+    border: 2px solid #00baf2;
+    background: url('https://cdn-icons-png.flaticon.com/512/3135/3135715.png');
+    background-size: cover;
+}
+.Recharge-bill-ad{
+    display: flex;
+}
+.section-title {
+    padding-top: 15px;
+    margin: 40px 0 20px 10px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+}
+
+.recharge-containerH{
+    padding: 0 40px;
+    /*box-shadow: 0px 1px 3px black; */
+    width: 53% !important;
+    height: 50vh !important;
+    border-radius: 15px !important;
+    margin-top: 90px !important;
+    background-color: white !important;
+    margin-left: 5.5% !important;
+    
+}
+.top-right-ad{
+    height: 50vh !important;
+    width: 25% !important;
+    margin-top: 90px !important;
+    border-radius: 15px !important;
+    background-color:rgb(255, 143, 102) !important;
+    margin-left: 2% !important;
+    color: white !important;
+    /* padding: 10px; */
+    /* transform:translateY(-5px); */ 
+}
+.top-right-ad:hover{
+    transform:translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    transition: 0.2s;
+}
+
+.recharge-grid {
+    display: flex !important;
+    justify-content: space-between !important;
+    gap: 20px !important;
+}
+
+.recharge-item {
+    text-align: center !important;
+    width: 10rem !important;
+    height: 8rem !important;
+    padding: 15px !important;
+    border-radius: 15px !important;
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.08); */
+    cursor: pointer !important;
+    transition: 0.2s !important;
+    margin-bottom: 15px !important;
+}
+.recharge-item img{
+    width: 80% !important;
+}
+
+.recharge-item:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12) !important;
+    background: rgb(248, 251, 255) !important;
+}
+
+.recharge-item img{
+    height: 55px !important;
+    margin-bottom: 10px !important;
+}
+
+.recharge-item p {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+.Recharge-ad-cards{
+    display: flex !important;
+   justify-content: space-between !important;
+   margin: 2% 5% !important;
+}
+
+.Promo-recharge{
+    height:7vh !important;
+    width: 45% !important;
+    background-color:coral;
+    border-radius: 30px;
+    margin: 10px;
+    transition:0.2s;
+    color: white;
+    text-align: center;
+    padding:10px;
+    font-weight: bold;
+    font-size: medium;
+    padding: 1%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.Promo-recharge:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    transition: 0.2s;
+}
+.Promo-recharge2-button{
+    height:2rem !important;
+    width: 8rem !important;
+    background-color: white;
+    border:1px solid coral;
+    border-radius: 40px;
+    /* margin-left: 8em;
+    margin-right: 0px; */
+}
+.icon-ad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-ad p{
+    margin-left:10px;
+    padding-top: 2px;
+}
+.gift-icon img{
+    height:3rem;
+    width:3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    
+}
+.Promo-recharge2{
+    background-color: white;
+    border: 1px solid coral;
+    float: right;
+    color:rgb(0, 0, 0,0.8);
+}
+
+.Ad-container{
+    display: flex;
+    justify-content: space-between;
+    height: 25vh;
+    width: 30%;
+    background-color:white;
+    margin:0px;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 1px 5px lightgrey;
+    color:rgb(13, 13, 13,0.8);
+    /* line-height: 6px; */
+}
+
+.Ad-text-content h2, .Ad-text-content p {
+    margin: 5px 0px; 
+    line-height: 1.2;
+
+}
+.Ad-text-content{
+    padding-top:25px;
+}
+.Ad-text-content h2{
+    font-weight:3px;
+}
+.Add-components{
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 5%;   
+}
+.Ad-Container-Img{
+    height: 80px;
+    width: 80px;
+    border-radius: 15px;
+    background-color:white;
+}
+
+.Download-btn{
+    height:2em;
+    width: 8em;
+    border-radius: 5px;
+    border:1px solid rgb(0, 0, 0,0.4);
+    background-color:white;
+    color: coral;
+    margin: 15px 5px;
+
+}
+
+.new-math-card {
+    background: linear-gradient(135deg, #00a8ff, #1fb2ff);
+    color: white;
+    padding: 0px 25px;
+    border-radius: 20px;
+    height: 50vh;
+    width: 25%;
+    margin-left: 2%;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: 0.25s;
+}
+
+.new-math-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+.new-math-card h2 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 34px;
+    margin-bottom: 12px;
+}
+
+.new-math-card p {
+    font-size: 16px;
+    opacity: 0.95;
+    margin-bottom: 22px;
+}
+
+.use-gradious-btn {
+    background: #ffd36a;
+    color: #000;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+    transition: 0.2s;
+}
+
+.use-gradious-btn:hover {
+    background: #ffcc55;
+}
+
+
+

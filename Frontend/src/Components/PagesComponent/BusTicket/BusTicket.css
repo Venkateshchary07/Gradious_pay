@@ -1,0 +1,187 @@
+.BusBooking-Wrapper {
+    min-height: 60vh;
+    padding: 40px;
+    background-color: #f5f7fa;
+    margin-top: 2rem;
+}
+
+.BusBooking-Wrapper h2 {
+    margin-bottom: 20px;
+}
+
+.BusBooking-Card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid lightgray;
+    margin: 0px;
+}
+
+.trip-type {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.from-to {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.from-to input {
+    width: 40%;
+    height: 2rem;
+    padding-left: 10px;
+    border-radius: 6px;
+    border: 1px solid grey;
+}
+
+.swap-btn {
+    background: none;
+    border: 1px solid lightgray;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.seat-type {
+    margin-bottom: 15px;
+}
+
+.seat-type span {
+    margin-right: 10px;
+}
+
+.seat-type button {
+    margin-right: 8px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid grey;
+    background-color: white;
+    cursor: pointer;
+}
+
+.seat-type button:hover {
+    background-color: coral;
+    color: white;
+}
+
+.ac-only {
+    margin-bottom: 15px;
+}
+
+.date-section {
+    margin-bottom: 20px;
+}
+
+.search-btn {
+    width: 200px;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: coral;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: rgb(224, 99, 53);
+}
+.date-section input{
+    height: 1.5rem;
+    width: 150px;
+    border-radius: 8px;
+    padding: 2px;
+    margin: 10px;
+    border: 0.5px solid grey;
+   
+}
+
+
+
+/* bus offer ads */
+.bus-offers-wrapper {
+    margin-top: 10px;
+    padding: 0 40px 40px;
+}
+
+.bus-offers-wrapper h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.bus-offers-container {
+    display: flex;
+    gap:30px;
+    justify-content: space-evenly;
+    
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.bus-offers-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.bus-offers-container::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.offer-card {
+    min-width: 380px;
+    height: 200px;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.offer-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.offer-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.1)
+    );
+    color: white;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.offer-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.offer-text {
+    font-size: 0.95rem;
+    margin: 6px 0 12px;
+}
+
+.offer-overlay button {
+    width: fit-content;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    background-color: coral;
+    color: white;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.offer-overlay button:hover {
+    background-color: rgb(196, 87, 47);
+}

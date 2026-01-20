@@ -1,0 +1,80 @@
+.recharge-card {
+  width: 40%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  
+}
+
+.recharge-card h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Radio Buttons */
+.radio-row {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.radio-row label {
+  font-size: 15px;
+}
+
+/* Input fields */
+.recharge-card input {
+  width: 100%;
+  padding: 10px 5px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+}
+.select_input{
+  width: 100%;
+  padding: 10px 5px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  color:gray;
+}
+.recharge-card input:focus {
+  border-bottom: 1px solid #f25c2a;
+}
+
+/* Amount and Browse Plans */
+.amount-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.browse-plans {
+  font-size: 13px;
+  color: #f25c2a;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.recharge-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #f25c2a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.recharge-btn:hover {
+  background: #d4481d;
+}

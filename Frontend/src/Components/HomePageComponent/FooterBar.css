@@ -1,0 +1,121 @@
+/* --- Base Footer Container --- */
+.Gradious-footer-container {
+    background-color: #2c3e50; /* Deep Slate/Navy color for professionalism */
+    color: #ecf0f1; /* Light gray text for readability */
+    font-family: Arial, sans-serif;
+    padding-top: 50px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.footer-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px; /* Max width to match your main content area */
+    margin: 0 auto;
+    padding: 0 40px 40px;
+}
+
+/* --- Column 1: Links Section --- */
+.links-section {
+    display: flex;
+    gap: 50px; /* Space between link groups */
+    width: 60%;
+}
+
+.link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3498db; /* Blue accent color for headings */
+    margin-bottom: 12px;
+}
+
+.footer-link {
+    font-size: 14px;
+    color: #bdc3c7; /* Lighter text color for links */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #ecf0f1; /* White on hover */
+}
+
+/* --- Column 2: Branding and Social Section --- */
+.contact-social-section {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+    text-align: right;
+}
+
+.footer-branding {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    height: 40px;
+    /* Optional: You may need CSS filter to make your coral logo visible against dark background */
+}
+
+.footer-brand-text {
+    color: #ecf0f1;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.footer-contact {
+    font-size: 14px;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+/* --- Social Icons --- */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.social-icon-wrapper {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #3498db; /* Blue background for icons */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.social-icon-wrapper:hover {
+    background-color: #2980b9;
+}
+
+/* --- Copyright Row --- */
+.footer-copyright-row {
+    border-top: 1px solid #34495e; /* Subtle line separator */
+    padding: 15px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #7f8c8d;
+}

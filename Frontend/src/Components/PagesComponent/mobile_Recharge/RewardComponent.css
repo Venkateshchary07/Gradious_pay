@@ -1,0 +1,50 @@
+.reward-banner {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px 10px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+  width: 40%;
+  height: 300px;
+  /* height: 70%; */
+  gap: 40px;
+  margin: 5% 10%;
+   background-color: #e7fff2;
+}
+
+.reward-image img {
+  width: 150px;
+  height: auto;
+}
+
+.reward-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reward-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.reward-amount {
+  font-size: 34px;
+  font-weight: 700;
+  color: #000;
+  margin: 6px 0;
+}
+
+.reward-subtext {
+  font-size: 20px;
+  color: #777;
+  margin-top: 5px;
+}
+.Reward-recharge{
+  display: flex;
+  /* justify-content: center; */
+ 
+}

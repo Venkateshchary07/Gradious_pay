@@ -1,0 +1,122 @@
+.upi-wrapper {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 40px;
+    background-color: #f5f7fa;
+}
+
+/* Main Card */
+.upi-card {
+    width: 420px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.upi-card h2 {
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.upi-subtext {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* UPI ID box */
+.upi-id-box {
+    background: #fff6f1;
+    border: 1px dashed coral;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.upi-id-box span {
+    font-size: 13px;
+    color: #555;
+}
+
+.upi-id {
+    font-weight: 600;
+    margin-top: 4px;
+    color: #222;
+}
+
+/* Inputs */
+.upi-card label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 500;
+}
+
+.upi-card input {
+    width: 100%;
+    height: 42px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding-left: 12px;
+    font-size: 16px;
+    letter-spacing: 6px;
+}
+
+.upi-card input:focus {
+    outline: none;
+    border-color: coral;
+}
+
+/* Button */
+.upi-btn {
+    margin-top: 20px;
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    background-color: coral;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.upi-btn:hover {
+    background-color: rgb(187, 88, 52);
+}
+
+/* Info text */
+.upi-info {
+    margin-top: 14px;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+}
+
+/* Right Side Card */
+.upi-side-card {
+    width: 320px;
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.upi-side-card h3 {
+    margin-bottom: 12px;
+}
+
+.upi-side-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.upi-side-card li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}

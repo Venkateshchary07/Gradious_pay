@@ -1,0 +1,128 @@
+.txn-success-wrapper {
+    min-height: 70vh;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+}
+
+.txn-success-card {
+    width: 420px;
+    background-color: white;
+    border-radius: 18px;
+    padding: 30px 26px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.txn-success-icon {
+    color: rgb(25, 190, 25);
+    margin-bottom: 14px;
+}
+.txn-failed-icon{
+    color:red;
+    margin-bottom: 14px;
+}
+
+.txn-success-card h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.txn-success-subtext {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 22px;
+}
+
+.txn-success-details {
+    border-top: 1px solid #eee;
+    padding-top: 18px;
+    margin-bottom: 24px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #444;
+}
+
+.detail-row strong {
+    color: #111;
+}
+
+.success-text {
+    color: #2ecc71 !important;
+    font-weight: 600;
+}
+.fail-text{
+    color:red !important;
+    font-weight:600 ;
+}
+
+.txn-success-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.primary-btn {
+    flex: 1;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    background-color: coral;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background-color: rgb(230, 101, 54);
+}
+
+.secondary-btn {
+    flex: 1;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid coral;
+    background-color: white;
+    color: coral;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.secondary-btn:hover {
+    background-color: #fff3ed;
+}
+
+
+
+@keyframes failShake {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  70% {
+    transform: translateX(-6px);
+  }
+  85% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.txn-failed-icon {
+  color: red;
+  margin-bottom: 14px;
+  animation: failShake 0.6s ease-out forwards;
+}

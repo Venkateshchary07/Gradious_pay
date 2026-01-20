@@ -1,0 +1,116 @@
+.transaction-wrapper {
+    min-height: 60vh;
+    padding: 40px;
+    background-color: #f5f7fa;
+    margin-top: 2rem;
+}
+
+/* Header */
+.transaction-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.wallet-balance {
+    background-color: coral;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Card */
+.transaction-card {
+    background-color: white;
+    border-radius: 14px;
+    border: 1px solid #e0e0e0;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* Row */
+.transaction-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.transaction-row:last-child {
+    border-bottom: none;
+}
+
+/* Left */
+.txn-left {
+    width: 45%;
+}
+
+.txn-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.txn-date {
+    font-size: 0.85rem;
+    color: gray;
+}
+
+/* Badge */
+.txn-badge {
+    width: 90px;
+    text-align: center;
+    padding: 6px 0;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.txn-badge.debit {
+    background-color: #ffeaea;
+    color: #d93025;
+}
+
+.txn-badge.credit {
+    background-color: #e6f7ee;
+    color: #188038;
+}
+
+/* Right */
+.txn-right {
+    width: 25%;
+    text-align: right;
+}
+
+.txn-amount {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.txn-amount.debit {
+    color: #d93025;
+}
+
+.txn-amount.credit {
+    color: #188038;
+}
+
+.txn-status {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.txn-status.success {
+    color: green;
+}
+
+.txn-status.failed {
+    color: red;
+}
+
+.txn-status.pending {
+    color: orange;
+}

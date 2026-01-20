@@ -1,0 +1,116 @@
+.pin-page {
+  background-color: #f6f7f9;
+  padding: 40px 0;
+  margin-top: 3rem;
+}
+
+.pin-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* LEFT CARD */
+.pin-card {
+ 
+  flex: 1;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.pin-card h2 {
+  margin-bottom: 8px;
+}
+
+.pin-subtitle {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.pin-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.lock-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.pin-input {
+  border: none;
+  outline: none;
+  font-size: 22px;
+  letter-spacing: 12px;
+  width: 100%;
+}
+
+.demo-text {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.pay-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff7a45, #ff9a5c);
+  cursor: pointer;
+}
+
+/* RIGHT CARD */
+.secure-card {
+  width: 360px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.secure-top {
+  background: linear-gradient(135deg, #ff7a45, #ff9a5c);
+  color: white;
+  padding: 25px;
+}
+
+.secure-lock {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.secure-top h3 {
+  margin-bottom: 8px;
+}
+
+.secure-list {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.secure-list li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.secure-bottom {
+  background: #fff3e6;
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+}

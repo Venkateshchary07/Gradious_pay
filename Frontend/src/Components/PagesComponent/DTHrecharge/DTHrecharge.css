@@ -1,0 +1,100 @@
+.dth-card {
+  width: 40%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.dth-card h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.radio-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.dth-card input[type="text"] {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 22px;
+  outline: none;
+  font-size: 16px;
+}
+
+.amount-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.browse-plans {
+  color: #ff5b00;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.recharge-btn {
+  width: 100%;
+  background: #ff5b00;
+  border: none;
+  color: white;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+/* Reward Component CSS */
+.reward-container {
+  display: flex;
+  align-items: center;
+  
+}
+
+.reward-box {
+  width: 380px;
+  background: #d9ffe8; /* light mint like screenshot */
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.reward-icon img {
+  width: 90px;
+}
+
+.reward-text-block h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.highlight {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.reward-text-block p {
+  margin-top: 5px;
+  color: #555;
+  font-size: 15px;
+}
+.select_input{
+  width: 100%;
+  padding: 10px 5px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  color:gray;
+}

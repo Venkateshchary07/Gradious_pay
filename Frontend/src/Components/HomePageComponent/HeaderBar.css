@@ -1,0 +1,93 @@
+.DashBoard-header {
+    position:fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    margin: 0px !important;
+    top:0px;
+    padding: 0 40px;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+    z-index: 200;
+}
+.Gradious-logo-icon{
+    cursor: pointer;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.DashBoard-header img {
+    height: 45px;
+}
+
+.Gradious-text {
+    margin: 0px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #0d0d0d;
+    cursor: pointer;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: 25px;
+}
+
+.nav-item {
+    font-size: 15px;
+    font-weight: 500;
+    color: #3d3d3d;
+    cursor: pointer;
+    padding: 8px 5px;
+}
+
+.nav-item:hover {
+    color:coral;
+}
+#Recharge-Bills,#Ticket-Booking,#Payments-services{
+    border: none;
+    font-size: 15px;  
+}
+
+ 
+.right-section {
+    display: flex;
+    align-items: center;
+    gap:80px;
+    margin: 100px;
+}
+
+
+.user-profile-outer {
+    height: 35px;
+    width: auto;
+    border: 1px solid #333;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 8px;
+    /* justify-content: center;  */
+}
+
+.user-Profile {
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    margin: 2px;
+    border: 2px solid #00baf2;
+    background: url('https://cdn-icons-png.flaticon.com/512/3135/3135715.png');
+    background-size: cover;
+}
+.user-profile-outer{
+    font-size:0.8rem;
+}

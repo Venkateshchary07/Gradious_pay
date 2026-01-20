@@ -1,0 +1,62 @@
+
+.Login-Container{
+   background-color: white;
+   height: 60vh;
+   width: 28vw;
+   border: 1px solid lightgray;
+   margin: 10% 35%;
+   padding: 0px;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.Gradious-logo{
+   height: 2.3rem;
+   width: 2.3rem;
+}
+.Login-input{
+   height: 1.8rem;
+   width: 65%;
+   border-radius: 5px;
+   border: 1px solid grey;
+   margin: 5px;
+}
+.Login-button{
+   height: 2.2rem;
+   width: 67%;
+   border-radius: 10px;
+   color:white;
+   background-color:coral;
+   border: none;
+   margin-top: 18px;
+   cursor: pointer;
+}
+.Login-button:hover{
+        background-color: rgb(230, 101, 54);
+}
+
+
+.register-link,.forgot-password{
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+.forgot-password{
+   color: rgb(3, 3, 124);
+   cursor: pointer;
+}
+.forgot-password:hover{
+   text-decoration: underline;
+}
+
+.register-link span {
+    color: coral;
+    cursor: pointer;
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+.register-link span:hover {
+    text-decoration: underline;
+}

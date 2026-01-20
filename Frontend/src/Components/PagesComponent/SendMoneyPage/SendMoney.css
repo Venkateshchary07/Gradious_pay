@@ -1,0 +1,205 @@
+.sendmoney-wrapper {
+    min-height: 80vh;
+    padding: 40px;
+    background-color: #f5f7fa;
+    margin-top: 2rem;
+    width: 92%;
+}
+
+.sendmoney-card {
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    border-radius: 12px;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+}
+
+.sendmoney-card label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.sendmoney-card input {
+    height: 2.2rem;
+    border-radius: 6px;
+    border: 1px solid grey;
+    padding-left: 10px;
+}
+
+.sendmoney-btn {
+    margin-top: 20px;
+    height: 2.6rem;
+    border-radius: 10px;
+    border: none;
+    background-color: coral;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.sendmoney-btn:hover {
+    background-color: rgb(187, 88, 52);
+}
+
+
+
+
+.sendmoney-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-left:40px ;
+}
+
+.sendmoney-layout > div:first-child {
+    width: 40%;
+}
+
+.sendmoney-ads {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.send-ad-card {
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid lightgray;
+    padding: 20px;
+}
+
+.send-ad-card h4 {
+    margin-bottom: 8px;
+}
+
+.send-ad-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.send-ad-card button {
+    margin-top: 10px;
+    border: none;
+    background-color: coral;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.send-ad-card button:hover {
+    background-color: rgb(187, 88, 52);
+}
+
+
+
+
+
+
+
+/* Right-side container */
+.sendmoney-insights {
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 2rem;
+    margin-left: 40px;
+}
+
+/* Base card */
+.insight-card {
+    background-color: white;
+    border-radius: 14px;
+    border: 1px solid lightgray;
+    padding: 22px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+/* Highlight (cashback) card */
+.insight-card.highlight {
+    background: linear-gradient(135deg, #ff8a50, #ff6f3d);
+    color: white;
+    border: none;
+}
+
+.insight-card.highlight button {
+    background-color: white;
+    color: #ff6f3d;
+}
+
+/* Badge */
+.insight-card .badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-color: #222;
+    color: white;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+/* Headings */
+.insight-card h3 {
+    margin-bottom: 8px;
+}
+
+/* Text */
+.insight-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.insight-card.highlight p {
+    color: #fff;
+}
+
+/* Button */
+.insight-card button {
+    margin-top: 12px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: coral;
+    color: white;
+    cursor: pointer;
+}
+
+/* List */
+.insight-card ul {
+    margin-top: 10px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.insight-card ul li {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+/* Muted card */
+.insight-card.muted {
+    background-color: #f8f9fb;
+}
+
+.insight-card .tip {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Hover effect */
+.insight-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}

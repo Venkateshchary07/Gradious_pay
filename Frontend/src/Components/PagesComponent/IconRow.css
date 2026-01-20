@@ -1,0 +1,28 @@
+.icons-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 0;
+  overflow-x: auto;
+}
+
+.icon-item {
+  text-align: center;
+  cursor: pointer;
+  color: #555;
+}
+
+.icon-item p {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.icon-item.active {
+  color: coral;
+  font-weight: bold;
+}
+
+.icon-item:hover {
+  color:coral;
+  transition: 0.3s;
+}
