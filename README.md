@@ -130,5 +130,21 @@ Aspiring Full Stack Developer
 This project is developed for learning and demonstration purposes.
 Some features are intentionally simplified to focus on understanding core concepts.
 
-````
+---
 
+## 📸 Project Screenshots
+
+### Frontend UI
+![Frontend UI](assets/Home_page.png)
+
+### Send Money Page
+![Send Money](assets/Send_money.png)
+
+### Login Page
+![Login Page](assets/Login_page.png)
+
+### Transaction_history
+![Transaction History](assets/Transaction_history.png)
+
+### Gradious Profile Page
+![Gradious_profile](assets/Gradious_profilepage.png)
