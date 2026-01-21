@@ -141,7 +141,7 @@ Some features are intentionally simplified to focus on understanding core concep
 ![Send Money](assets/Send_money.png)
 
 ### Login Page
-![Login Page](assets/Login_page.png)
+![Login Page](assets/Login%20_page.png)
 
 ### Transaction_history
 ![Transaction History](assets/Transaction_history.png)
