@@ -18,7 +18,7 @@ export default function Profile() {
         
     const  handleLogOut =()=> {
               localStorage.removeItem("token");
-                    clearProfileData(null);
+                    clearProfileData();
                     navigate("/loginpage");    }
   return (
     <>

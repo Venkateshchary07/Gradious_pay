@@ -1,142 +1,137 @@
 import './RegisterPage.css';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function RegisterPage() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const nameRef = useRef(null);
-    const emailRef = useRef(null);
-    const passwordRef = useRef(null);
-    const confirmPasswordRef = useRef(null);
-    const mobileRef = useRef(null);
-    
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
+  const confirmPasswordRef = useRef(null);
+  const mobileRef = useRef(null);
 
-    const handleRegister = async () => {
-        const name = nameRef.current.value.trim();
-        const email = emailRef.current.value.trim();
-        const password = passwordRef.current.value;
-        const confirmPassword = confirmPasswordRef.current.value;
-        const mobile = mobileRef.current.value;
+  const [step, setStep] = useState("REGISTER");
+  const [email, setEmail] = useState("");
+  const [otp, setOtp] = useState("");
 
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const handleRegister = async () => {
+    const name = nameRef.current.value.trim();
+    const emailVal = emailRef.current.value.trim();
+    const password = passwordRef.current.value;
+    const confirmPassword = confirmPasswordRef.current.value;
+    const mobile = mobileRef.current.value;
 
-        if (!name) {
-            alert("Name is required");
-            return;
-        }
-        if(mobile.length <10){
-            alert("Required 10 Digits mobile number")
-        }
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-        if (!emailRegex.test(email)) {
-            alert("Please enter a valid email");
-            return;
-        }
+    if (!name) return alert("Name is required");
+    if (mobile.length !== 10) return alert("Enter valid 10-digit mobile number");
+    if (!emailRegex.test(emailVal)) return alert("Enter valid email");
+    if (password.length < 6) return alert("Password must be at least 6 characters");
+    if (password !== confirmPassword) return alert("Passwords do not match");
 
-        if (password.length < 6) {
-            alert("Password must be at least 6 characters");
-            return;
-        }
+    try {
+      const response = await fetch("http://localhost:3000/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email: emailVal, password, mobile })
+      });
 
-        if (password !== confirmPassword) {
-            alert("Passwords do not match");
-            return;
-        }
-        
+      const data = await response.json();
 
-        try {
-            const response = await fetch("http://localhost:3000/register", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    name,
-                    email,
-                    password,
-                    mobile
-                })
-            });
+      if (!response.ok) {
+        alert(data.message);
+        return;
+      }
 
-            const data = await response.json();
+      alert("OTP sent to your email");
+      setEmail(emailVal);
+      setStep("OTP");
 
-            if (!response.ok) {
-                alert(data.message || "Registration failed");
-                return;
-            }
+    } catch (err) {
+      console.error(err);
+      alert("Server error");
+    }
+  };
 
-            alert("Registration successful Please login.");
-            navigate("/loginpage");
+  const handleVerifyOtp = async () => {
+    if (!otp) return alert("Enter OTP");
 
-        } catch (error) {
-            console.error(error);
-            alert("Server error   Please try again.");
-        }
-    };
+    try {
+      const response = await fetch("http://localhost:3000/otp/verify-register-otp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, otp })
+      });
 
-    return (
-        <>
-           
+      const data = await response.json();
 
-            <div className="Register-Page">
-                <div className="Register-Container">
-                    <div className="Gradious-logo">
-                        <img
-                            className="Gradious-logo"
-                            src="./public/Gradious-logo-pngf.png"
-                            alt="Gradious-logo"
-                        />
-                    </div>
+      if (!response.ok) {
+        alert(data.message);
+        return;
+      }
 
-                    <h2>Create Account</h2>
+      alert("Registration successful. Please login.");
+      navigate("/loginpage");
 
-                    <input
-                        className="Register-input"
-                        type="text"
-                        placeholder="Full Name"
-                        ref={nameRef}
-                    />
+    } catch (err) {
+      console.error(err);
+      alert("Server error");
+    }
+  };
 
-                    <input
-                        className="Register-input"
-                        type="text"
-                        placeholder="Email"
-                        ref={emailRef}
-                    />
-                    <input
-                        className="Register-input"
-                        type="text"
-                        placeholder="Mobile Number"
-                        ref={mobileRef}
-                    />
+  return (
+    <div className="Register-Page">
+      <div className="Register-Container">
 
-                    <input
-                        className="Register-input"
-                        type="password"
-                        placeholder="Password"
-                        ref={passwordRef}
-                    />
+        <div className="Gradious-logo">
+          <img
+            className="Gradious-logo"
+            src="./public/Gradious-logo-pngf.png"
+            alt="Gradious-logo"
+          />
+        </div>
 
-                    <input
-                        className="Register-input"
-                        type="password"
-                        placeholder="Confirm Password"
-                        ref={confirmPasswordRef}
-                    />
+        {step === "REGISTER" && (
+          <>
+            <h2>Create Account</h2>
 
-                    <button className="Register-button" onClick={handleRegister}>
-                        Register
-                    </button>
+            <input className="Register-input" placeholder="Full Name" ref={nameRef} />
+            <input className="Register-input" placeholder="Email" ref={emailRef} />
+            <input className="Register-input" placeholder="Mobile Number" ref={mobileRef} />
+            <input className="Register-input" type="password" placeholder="Password" ref={passwordRef} />
+            <input className="Register-input" type="password" placeholder="Confirm Password" ref={confirmPasswordRef} />
 
-                    <p className="login-link">
-                        Already have an account?
-                        <span onClick={() => navigate("/loginpage")}> Login</span>
-                    </p>
-                </div>
-            </div>
+            <button className="Register-button" onClick={handleRegister}>
+              Register
+            </button>
 
-           
-        </>
-    );
+            <p className="login-link">
+              Already have an account?
+              <span onClick={() => navigate("/loginpage")}> Login</span>
+            </p>
+          </>
+        )}
+
+        {step === "OTP" && (
+          <>
+            <h2>Verify OTP</h2>
+
+            <input
+              className="Register-input"
+              type="text"
+              placeholder="Enter OTP"
+              value={otp}
+              onChange={(e) => setOtp(e.target.value)}
+            />
+
+            <button className="Register-button" onClick={handleVerifyOtp}>
+              Verify OTP
+            </button>
+          </>
+        )}
+
+      </div>
+    </div>
+  );
 }

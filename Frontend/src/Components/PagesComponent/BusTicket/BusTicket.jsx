@@ -91,7 +91,7 @@ export default function BusBooking() {
                         <label>
                             <input
                                 type="radio"
-                                checked={tripType === "oneway"}
+                                 checked={tripType === "oneway"}
                                 onChange={() => setTripType("oneway")}
                             />
                             One Way

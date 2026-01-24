@@ -1,5 +1,4 @@
 import "./ForgotPassword.css";
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -85,7 +84,7 @@ export default function ForgotPassword() {
     }
   };
 
-  /* ================= RESET PASSWORD ================= */
+
   const handleResetPassword = async () => {
     if (newPassword.length < 6) {
       alert("Password must be at least 6 characters");
@@ -155,6 +154,7 @@ export default function ForgotPassword() {
 
 
          {/* Otp verification*/}
+
           {step === "OTP" && (
             <>
               <p className="subtitle">

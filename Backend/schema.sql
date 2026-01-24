@@ -1,4 +1,5 @@
 CREATE DATABASE IF NOT EXISTS GradiousPay;
+
 USE GradiousPay;
 
 CREATE TABLE IF NOT EXISTS users (

@@ -1,16 +1,24 @@
 import "./SetUpiPin.css";
+import { useProfileData } from "../../../context/ProfileContext";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTransaction } from "../../../context/transaction";
+import { useEffect } from "react";
 
 export default  function SetUpiPin() {
 
     const [upiPin, setUpiPin] = useState("");
     const [confirmPin, setConfirmPin] = useState("");
-    const {transaction} = useTransaction();
-
+     const { profileState } = useProfileData();
     const navigate = useNavigate();
+
+     useEffect(() => {
+    if (!profileState) {
+      alert("Session expired. Please login again.");
+      navigate("/loginpage");
+    }
+  }, [profileState, navigate]);
     const handleSetPin = async () => {
         if (upiPin.length !== 4 || confirmPin.length !== 4) {
             alert("UPI PIN must be 4 digits");
@@ -59,8 +67,8 @@ export default  function SetUpiPin() {
                     <div className="upi-id-box">
                         <span>Your UPI ID</span>
                         <p className="upi-id">
-                            {transaction.receiver}
-                        </p>
+                            {profileState?.upi_id || "UPI ID not available"}
+                            </p>
                     </div>
 
                     <label>Enter UPI PIN</label>

@@ -197,5 +197,110 @@ router.post("/reset-password", async (req, res) => {
   }
 });
 
+router.post("/verify-register-otp", async (req, res) => {
+  const { email, otp } = req.body;
+
+  if (!email || !otp) {
+    return res.status(400).json({ message: "Email and OTP required" });
+  }
+
+  const conn = await db.getConnection();
+
+  try {
+    await conn.beginTransaction();
+
+    const [users] = await conn.query(
+      "SELECT id FROM users WHERE email = ? AND status = 'PENDING'",
+      [email]
+    );
+
+    if (users.length === 0) {
+      await conn.rollback();
+      return res.status(404).json({ message: "User not found or already verified" });
+    }
+
+    const userId = users[0].id;
+
+    const [otps] = await conn.query(
+      `SELECT id, otp_hash, expires_at
+       FROM otp_verifications
+       WHERE user_id = ? AND purpose = 'REGISTER'
+       ORDER BY created_at DESC LIMIT 1`,
+      [userId]
+    );
+
+    if (otps.length === 0) {
+      await conn.rollback();
+      return res.status(400).json({ message: "OTP not found" });
+    }
+
+    const otpRow = otps[0];
+
+    if (new Date() > otpRow.expires_at) {
+      await conn.rollback();
+      return res.status(400).json({ message: "OTP expired" });
+    }
+
+    const matched = await bcrypt.compare(otp, otpRow.otp_hash);
+    if (!matched) {
+      await conn.rollback();
+      return res.status(400).json({ message: "Invalid OTP" });
+    }
+
+    // activate user
+    await conn.query(
+      "UPDATE users SET status = 'ACTIVE' WHERE id = ?",
+      [userId]
+    );
+
+    // create wallet
+    await conn.query(
+      "INSERT INTO wallets (user_id, balance) VALUES (?, 0)",
+      [userId]
+    );
+
+    // create UPI
+   // fetch user's mobile number
+        const [userRows] = await conn.query(
+          "SELECT mobile FROM users WHERE id = ?",
+          [userId]
+        );
+
+          if (userRows.length === 0) {
+            await conn.rollback();
+            return res.status(400).json({ message: "User mobile not found" });
+          }
+
+      const mobile = userRows[0].mobile;
+
+// create UPI using mobile number
+      const upiId = `${mobile}@gradious`;
+
+      await conn.query(
+        "INSERT INTO upi_account (user_id, upi_id) VALUES (?, ?)",
+        [userId, upiId]
+      );
+
+
+    // delete OTP
+    await conn.query(
+      "DELETE FROM otp_verifications WHERE id = ?",
+      [otpRow.id]
+    );
+
+    await conn.commit();
+
+    res.status(200).json({ message: "Account verified successfully" });
+
+  } catch (err) {
+    await conn.rollback();
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
+  } finally {
+    conn.release();
+  }
+});
+
+
 
 module.exports = router;

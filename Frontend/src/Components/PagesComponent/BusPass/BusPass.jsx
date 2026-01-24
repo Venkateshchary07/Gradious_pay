@@ -15,7 +15,6 @@ function BusPass() {
 
         <div className="Reward-recharge">
 
-          {/* SAME CARD DESIGN AS OTHER COMPONENTS */}
           <div className="dth-card">
             <h2>Recharge Bus Pass</h2>
 
