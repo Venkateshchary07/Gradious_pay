@@ -82,6 +82,15 @@ npm run dev
 
 ---
 
+## 🗄️ Database Setup
+
+1. Create a MySQL database named `GradiousPay`
+2. Run the SQL script provided in `schema.sql` to create tables and seed required data:
+
+```sql
+SOURCE schema.sql;
+
+
 ### 3️⃣ Frontend Setup
 
 ```bash

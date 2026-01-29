@@ -138,11 +138,17 @@ app.post("/login", async (req, res) => {
     await conn.commit();
 
     // send email
-    await transporter.sendMail({
-      to: email,
-      subject: "Gradious Pay - Verify Your Account",
-      html: `<h2>Your OTP is ${otp}</h2><p>Valid for 5 minutes</p>`
-    });
+    try {
+                  await transporter.sendMail({
+                    to: email,
+                    subject: "Gradious Pay - Verify Your Account",
+                    html: `<h2>Your OTP is ${otp}</h2><p>Valid for 5 minutes</p>`
+                  });
+                } catch (mailErr) {
+                  console.error("OTP EMAIL FAILED:", mailErr.message);
+                  // IMPORTANT: do not block registration
+                }
+
 
     res.status(201).json({
       message: "OTP sent for verification",

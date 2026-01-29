@@ -7,12 +7,12 @@ export default function Profile() {
       const {profileState,changeProfile,clearProfileData}= useProfileData()
  
         const user = {
-                    name:profileState.name,
-                    mobile:profileState.Mobile,
-                    email: profileState.email,
-                    upiId: profileState.upi_id,
-                    status: profileState.status,
-                    registeredAt:profileState.created_at
+                    name:profileState?.name,
+                    mobile:profileState?.Mobile,
+                    email: profileState?.email,
+                    upiId: profileState?.upi_id,
+                    status: profileState?.status,
+                    registeredAt:profileState?.created_at
         };
       
         

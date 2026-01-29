@@ -10,7 +10,7 @@ export default function HeaderBar(props){
     return(
        <header className="DashBoard-header">
               <div className="left-section">
-                     <img className='Gradious-logo-icon' onClick={()=>navigate("https://gradious.com/")} src="./public/Gradious-logo-pngf.png" alt="Gradious-logo" />
+                     <img className='Gradious-logo-icon' onClick={()=>navigate("/homepage")} src="./public/Gradious-logo-pngf.png" alt="Gradious-logo" />
                      <h1 onClick={()=>navigate("/homepage") } className="Gradious-text">Gradious Pay</h1>
 
                      <div className="nav-items"> 
@@ -58,9 +58,9 @@ export default function HeaderBar(props){
                             {text:"Transaction History", 
                               path:"/transactionhistory"},
                             {text:"Loan Payment", 
-                             path:"/trainticket"},
+                             path:"#"},
                             {text:"Wealth", 
-                             path:"/flightticket"},
+                             path:"#"},
                             {text:"Wallet-Top-Up", 
                              path:"/wallettopup"}
                             ]}
@@ -70,7 +70,7 @@ export default function HeaderBar(props){
               <div className="right-section" onClick={()=>navigate('/profile')}>
                      <div className="user-profile-outer">
                      <div className="user-Profile"></div>
-                     <p>Hi {profileState?.name.trim().split(" ")[0] || "User"}</p>
+                     <p>Hi {profileState?.name?.trim().split(" ")[0] || "User"}</p>
                      </div>
               </div>
 

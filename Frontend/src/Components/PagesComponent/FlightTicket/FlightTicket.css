@@ -121,14 +121,15 @@
 
 .flight-offers-container {
     display: flex;
-    gap: 20px;
+    gap: 2px;
     justify-content: space-evenly;
     overflow-x: auto;
     margin-bottom: 30px;
+   
 }
 
 .flight-offer-card {
-    min-width: 380px;
+    min-width: 400px;
     height: 200px;
     border-radius: 14px;
     overflow: hidden;
@@ -167,11 +168,11 @@
 .special-fare-container {
     display: flex;
     justify-content: space-evenly;
-    gap: 20px;
+    gap: 2px;
 }
 
 .fare-card {
-    width: 220px;
+    width: 400px;
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid lightgray;

@@ -193,6 +193,7 @@
     background-color: white;
     border:1px solid coral;
     border-radius: 40px;
+    cursor: pointer;
     /* margin-left: 8em;
     margin-right: 0px; */
 }
@@ -200,6 +201,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .icon-ad p{
     margin-left:10px;
@@ -243,6 +245,9 @@
 }
 .Ad-text-content h2{
     font-weight:3px;
+}
+.Ad-text-content button{
+        cursor: pointer;
 }
 .Add-components{
     display: flex;

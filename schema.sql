@@ -9,7 +9,8 @@ CREATE TABLE IF NOT EXISTS users (
     mobile VARCHAR(15) UNIQUE,
     password VARCHAR(255) NOT NULL,
     status VARCHAR(20) DEFAULT 'ACTIVE',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    role VARCHAR(20)
 );
 
 CREATE TABLE IF NOT EXISTS wallets (
@@ -87,9 +88,45 @@ CREATE TABLE otp_verifications (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
   otp_hash VARCHAR(255) NOT NULL,
-  purpose ENUM('FORGOT_PASSWORD') NOT NULL,
+  purpose ENUM('FORGOT_PASSWORD','REGISTER') NOT NULL,
   expires_at DATETIME NOT NULL,
   is_used BOOLEAN DEFAULT FALSE,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+
+
+
+-- Seed SYSTEM user (REQUIRED)
+
+
+INSERT INTO users (id, name, email, mobile, password, status, role)
+VALUES (
+  5,
+  'SYSTEM',
+  'system@gradious.com',
+  '0000000000',
+  '$2b$10$systempasswordhashplaceholderxxxxxxxxxxxxxxxxxxxx',
+  'ACTIVE',
+  'SYSTEM'
+)
+ON DUPLICATE KEY UPDATE email = email;
+
+-- Ensure auto increment continues from 6
+ALTER TABLE users AUTO_INCREMENT = 6;
+
+
+-- SYSTEM wallet (prevents wallet errors)
+
+
+INSERT INTO wallets (user_id, balance)
+VALUES (5, 0)
+ON DUPLICATE KEY UPDATE balance = balance;
+
+
+-- SYSTEM UPI account
+
+
+INSERT INTO upi_account (user_id, upi_id)
+VALUES (5, 'system@gradious')
+ON DUPLICATE KEY UPDATE upi_id = upi_id;

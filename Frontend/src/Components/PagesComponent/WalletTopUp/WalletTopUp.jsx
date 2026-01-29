@@ -40,6 +40,7 @@ const handleTopUp = () => {
           type="number"
           placeholder="Enter amount (₹)"
           value={amount}
+          className="Enter-amount"
           onChange={(e) => setAmount(e.target.value)}
         />
 

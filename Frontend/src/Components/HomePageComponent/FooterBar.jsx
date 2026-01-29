@@ -39,7 +39,7 @@ export default function FooterBar(){
                 <div className="footer-column contact-social-section">
                     
                     <div className="footer-branding">
-                        <img src="./public/Gradious-logo-pngf.png" alt="Gradious Pay Logo" className="footer-logo" />
+                        <img src="./public/gradious_logo_R.png" alt="Gradious Pay Logo" className="footer-logo" />
                         <h3 className="footer-brand-text">Gradious Pay</h3>
                     </div>
 

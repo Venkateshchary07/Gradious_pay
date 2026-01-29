@@ -28,7 +28,7 @@
 }
 
 .topup-card input {
-  width: 100%;
+  width: 94%;
   height: 44px;
   padding: 0 12px;
   font-size: 16px;
@@ -47,7 +47,7 @@
   border: 1px solid coral;
   background: white;
   color: coral;
-  padding: 8px 14px;
+  padding: 8px 30px;
   border-radius: 20px;
   cursor: pointer;
   font-weight: 500;

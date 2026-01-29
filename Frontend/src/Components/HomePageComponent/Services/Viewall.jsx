@@ -17,8 +17,7 @@ import {
   FaHeartbeat,
 } from "react-icons/fa";
 import "./Viewall.css";
-import HeaderBar from "../HeaderBar";
-import FooterBar from "../FooterBar";
+
 
 function ServicesPage() {
   const navigate = useNavigate();
@@ -45,7 +44,7 @@ function ServicesPage() {
 
   return (
     <>
-            <HeaderBar/>
+          
             <div className="services-container">
             <h1 className="services-title">Services</h1>
 
@@ -62,7 +61,7 @@ function ServicesPage() {
                 ))}
             </div>
             </div>
-            <FooterBar/>
+           
 </>
   );
 }

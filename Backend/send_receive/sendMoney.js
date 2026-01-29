@@ -2,28 +2,11 @@ const jwt = require("jsonwebtoken");
 const express = require('express');
  const router = express.Router();
  const db = require('../configuration/dataBaseConnect.js');
+ const auth = require('../middlewares/auth.js');
 
 const bcrypt = require("bcrypt");
 
-//This middleware is used to check either user is logged in or not
 
-function auth(req, res, next) {
-  const authHeader = req.headers.authorization;
-
-  if (!authHeader) {
-    return res.status(401).json({ message: "Token missing" });
-  }
-
-  const token = authHeader.split(" ")[1];
-
-  try {
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        req.user = decoded; 
-        next();
-  } catch (err) {
-         return res.status(401).json({ message: "Invalid or expired token" });
-  }
-}
 
 
 // Updating the wallet 
@@ -99,7 +82,7 @@ router.post("/wallet/topup", auth, async (req, res) => {
   try {
     const userId = req.user.userId;
 
-    const [rows] = await db.query(
+    const result = await db.query(
                             `SELECT 
                               u.name,
                               u.email,
@@ -113,6 +96,7 @@ router.post("/wallet/topup", auth, async (req, res) => {
                             WHERE u.id = ?`,
                             [userId]
                           );
+          const rows = result[0];
 
           if (rows.length === 0) {
               return res.status(404).json({ message: "Profile not found" });

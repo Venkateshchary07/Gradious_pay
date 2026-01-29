@@ -65,6 +65,9 @@
 
 .footer-logo {
     height: 40px;
+    
+    background-color: #2c3e50;
+
     /* Optional: You may need CSS filter to make your coral logo visible against dark background */
 }
 

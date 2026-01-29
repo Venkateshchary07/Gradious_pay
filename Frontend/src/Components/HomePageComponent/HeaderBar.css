@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 60px;
     width: 100%;
     margin: 0px !important;
     top:0px;
@@ -24,7 +24,7 @@
 }
 
 .DashBoard-header img {
-    height: 45px;
+    height: 35px;
 }
 
 .Gradious-text {
@@ -76,6 +76,7 @@
     align-items: center;
     flex-direction: row;
     padding-right: 8px;
+    cursor: pointer;
     /* justify-content: center;  */
 }
 
